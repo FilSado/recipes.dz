@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рецепты</title>
+</head>
+<body>
+<lu style = "color : green; font-size: 25px">
+    <u> Для блюда {{dish}} на {{quantity}} персон(ы) необходимо:</u>
+{% for ingredient, amount in recipe.items %}
+    <li style = "font-size: 20px">{{ ingredient }}: {{ amount }}</li>
+{% empty %}
+    <p>Такого рецепта не знаю :(</p>
+{% endfor %}
+</lu>
+</body>
+</html>
